@@ -3,11 +3,11 @@ import { Rewards } from "./Rewards/Rewards";
 
 export const AppRoutes = [
     {
-        path: "Starbucks-Clone",
+        path: "/",
         element: <Home />
     },
     {
-        path: "Starbucks-Clone/rewards",
+        path: "/rewards",
         element: <Rewards />
     }
 ];

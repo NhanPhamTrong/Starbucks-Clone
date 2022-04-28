@@ -24,7 +24,7 @@ const Header = (props) => {
     return (
         <header>
             <div className="container">
-                <Link className="brand" to="/Starbucks-Clone" aria-label="brand">aaaaaaaaa</Link>
+                <Link className="brand" to="/" aria-label="brand">aaaaaaaaa</Link>
                 <button className={"navbar-toggler " + active.navbarActive} onClick={ToggleNavbar} type="button" aria-label="Navbar Toggler">
                     <span></span>
                     <span></span>
@@ -59,7 +59,7 @@ const Header = (props) => {
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Starbucks-Clone/rewards">Rewards</Link>
+                            <Link to="/rewards">Rewards</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/gift-cards">Gift Cards</Link>
