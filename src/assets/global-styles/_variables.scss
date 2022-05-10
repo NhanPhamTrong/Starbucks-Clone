@@ -8,6 +8,9 @@
 // Colors
 $black: rgb(0, 0, 0);
 $dim-gray: rgb(100, 100, 100);
+$jade: rgb(0, 168, 98);
+$laser: rgb(203, 162, 88);
+$narvik: rgb(242, 240, 235);
 $nero: rgb(33, 33, 33);
 $palm-green: rgb(30, 57, 50);
 $tranquil: rgb(212, 233, 226);
@@ -19,6 +22,7 @@ $white-smoke: rgb(249, 249, 249);
 $background-1: $tranquil;
 $background-2: $palm-green;
 $background-3: $watercourse;
+$background-4: $narvik;
 $banner-background: $palm-green;
 $btn-border-1: $white;
 $btn-border-2: $palm-green;
@@ -26,14 +30,16 @@ $close-menu-btn-background: $white-smoke;
 $join-now-btn-background: $black;
 $menu-background: $white;
 $nav-background: $white;
-$nav-link-current: $watercourse;
+$underline-current-1: $watercourse;
 $social-media-btn-background: $nero;
+$star: $laser;
 $word-color-1: $white;
 $word-color-2: $black;
 $word-color-3: $palm-green;
 $word-color-4: $dim-gray;
 $word-color-5: $nero;
 $word-color-6: $watercourse;
+$word-color-7: $jade;
 
 
 @keyframes navbar-toggler-bar-1 {
