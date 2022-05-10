@@ -1,0 +1,85 @@
+@import "../../assets/global-styles/global-styles";
+
+main#rewards {
+    .rewards-section:nth-child(1) {
+        padding: 0.4375rem 1rem;
+        background-color: $banner-background;
+        color: $word-color-1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+
+        h1 {
+            font-size: 0.8125rem;
+        }
+
+        a {
+            padding: 0.5rem 1rem;
+            border: $btn-border-1 solid 1px;
+            border-radius: 10rem;
+            color: $word-color-1;
+            line-height: 1rem;
+        }
+    }
+
+    .rewards-section:nth-child(2) {
+        margin-bottom: 4.5rem;
+        padding-bottom: 20rem;
+        background: $background-1 url("../../assets/images/Rewards-hero-mobile.webp") no-repeat bottom right;
+        background-size: 100%;
+
+        .heading-container {
+            width: 61%;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            p {
+                margin-top: 1rem;
+                font-size: 1rem;
+            }
+
+            .join-in-app, .join-online {
+                a {
+                    font-size: 0.875rem;
+                }
+            }
+
+            .join-in-app {
+                margin-top: 2rem;
+
+                a {
+                    padding: 0.5rem 1rem;
+                    background-color: $background-3;
+                    border-radius: 10rem;
+                    color: $word-color-1;
+                }
+            }
+
+            .join-online {
+                margin-top: 1rem;
+                
+                a {
+                    color: $word-color-2;
+                    text-decoration: underline;
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    // .rewards-section:nth-child(3) {
+
+    // }
+}

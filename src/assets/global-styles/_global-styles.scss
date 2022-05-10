@@ -1,0 +1,22 @@
+@import "reset";
+@import "variables";
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    overflow-x: hidden;
+
+    footer {
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+body.active-navbar {
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    body, body.active-navbar {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+}

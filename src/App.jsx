@@ -1,22 +1,19 @@
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import Header from "./components/Header/Header";
+import { Routes, Route } from "react-router-dom";
 import { AppRoutes } from "./pages";
+import { Footer } from "./components/Footer/Footer";
 
 const App = () => {
-    const location = useLocation();
 
     return (
         <>
-            <Header />
-            <main>
-                <Routes location={location} key={location.pathname}>
-                    {AppRoutes.map((route, index) => {
-                        const { path, element } = route;
-                        return <Route path={path} element={element} />;
-                    })}
-                </Routes>
-            </main>
+            <Routes>
+                {AppRoutes.map((route, index) => {
+                    const { path, element } = route;
+                    return <Route key={index} path={path} element={element} />
+                })}
+            </Routes>
+            <Footer />
         </>
     )
 }
