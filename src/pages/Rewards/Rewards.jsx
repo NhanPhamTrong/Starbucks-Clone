@@ -31,7 +31,9 @@ export const Rewards = () => {
         active: "",
         error: "",
         haveText: ""
-    })
+    });
+
+    const [mark, setMark] = useState(false);
 
     const GetOption = (e) => {
         const order = parseInt(e.target.getAttribute("order"));
@@ -63,39 +65,52 @@ export const Rewards = () => {
 
     const HandleClickOutside = (e) => {
         if (e.target.closest("div").classList.contains("star-code-form")) {
-            if (input.error === "error") {
-                setInput((prevValue) => ({
-                    text: prevValue.text,
-                    active: "active",
-                    error: "error",
-                    haveText: ""
-                }));
-            }
-            else {
+            if (!mark) {
+                setMark(true);
                 setInput((prevValue) => ({
                     text: prevValue.text,
                     active: "active",
                     error: "",
                     haveText: ""
                 }));
+            }
+            if (mark) {
+                if (input.error === "error") {
+                    setInput((prevValue) => ({
+                        text: prevValue.text,
+                        active: "active",
+                        error: "error",
+                        haveText: ""
+                    }));
+                }
+                else {
+                    setInput((prevValue) => ({
+                        text: prevValue.text,
+                        active: "active",
+                        error: "",
+                        haveText: ""
+                    }));
+                }
             }
         }
         else {
-            if (input.text !== "") {
-                setInput((prevValue) => ({
-                    text: prevValue.text,
-                    active: "",
-                    error: "",
-                    haveText: "have-text"
-                }));
-            }
-            else {
-                setInput((prevValue) => ({
-                    text: prevValue.text,
-                    active: "",
-                    error: "error",
-                    haveText: ""
-                }));
+            if (mark) {
+                if (input.text !== "") {
+                    setInput((prevValue) => ({
+                        text: prevValue.text,
+                        active: "",
+                        error: "",
+                        haveText: "have-text"
+                    }));
+                }
+                else {
+                    setInput((prevValue) => ({
+                        text: prevValue.text,
+                        active: "",
+                        error: "error",
+                        haveText: ""
+                    }));
+                }
             }
         }
     }
