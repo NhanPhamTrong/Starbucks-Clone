@@ -7,7 +7,7 @@ main#rewards {
         color: $word-color-5;
 
         .intro {
-            margin-top: 1rem;
+            padding-top: 1rem;
             font-size: 0.875rem;
         }
     }
@@ -310,6 +310,166 @@ main#rewards {
 
             .earn-stars:nth-child(2) {
                 padding: 3.5rem 0;
+            }
+        }
+    }
+
+    .rewards-section:nth-child(7) {
+        form {
+            padding-top: 1rem;
+
+            .star-code-input {
+                padding: 0.75rem 0;
+
+                .star-code-form {
+                    position: relative;
+
+                    label {
+                        background-color: $background-5;
+                        pointer-events: none;
+                        position: absolute;
+                        left: 1rem;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        transition: 0.2s;
+                    }
+        
+                    input {
+                        width: 100%;
+                        padding: 0.75rem 1rem;
+                        border: $dim-gray solid 1px;
+                        border-radius: 10px;
+                        outline: none;
+                    }
+                }
+
+                p {
+                    padding-left: 1rem;
+                    display: none;
+                    align-items: center;
+                    font-size: 0.75rem;
+
+                    span {
+                        margin-right: 0.5rem;
+                        color: $word-color-8;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+
+            .star-code-input.have-text {
+                .star-code-form {
+                    label {
+                        padding: 0 0.25rem;
+                        font-size: 0.8125rem;
+                        top: 0;
+                        transform: translate(0, -0.75rem);
+                        transition: 0.2s;
+                    }
+                }
+            }
+
+            .star-code-input.active {
+                .star-code-form {
+                    label {
+                        padding: 0 0.25rem;
+                        color: $word-color-6;
+                        font-size: 0.8125rem;
+                        top: 0;
+                        transform: translate(0, -0.75rem);
+                        transition: 0.2s;
+                    }
+    
+                    input {
+                        border: $input-border-1 solid 2px;
+                    }
+                }
+            }
+
+            .star-code-input.error {
+                padding: 0.75rem 0 0;
+
+                .star-code-form {
+                    label {
+                        color: $word-color-8;
+                        font-size: 1rem;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                    }
+    
+                    input {
+                        border: $input-border-2 solid 2px;
+                    }
+                }
+
+                p {
+                    display: flex;
+                }
+            }
+
+            .star-code-input.active.error {
+                .star-code-form {
+                    label {
+                        padding: 0 0.25rem;
+                        color: $word-color-8;
+                        font-size: 0.8125rem;
+                        top: 0;
+                        transform: translate(0, -0.75rem);
+                        transition: 0.2s;
+                    }
+    
+                    input {
+                        border: $input-border-2 solid 2px;
+                    }
+                }
+            }
+
+            button {
+                margin: 0.5rem 0 0 auto;
+                padding: 0.5rem 1rem;
+                background-color: transparent;
+                border: $btn-border-3 solid 1px;
+                border-radius: 10rem;
+                display: block;
+                font-size: 0.875rem;
+                font-weight: 700;
+            }
+
+            button:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    .rewards-section:nth-child(8) {
+        p {
+            color: $word-color-4;
+            line-height: 1.25rem;
+
+            a {
+                color: $word-color-7;
+            }
+        }
+    }
+
+    .rewards-section:nth-child(9) {
+        p, h4 {
+            color: $word-color-4;
+            font-size: 0.8125rem;
+            line-height: 1.25rem;
+        }
+
+        p {
+            padding-bottom: 2rem;
+        }
+
+        div {
+            p, h4 {
+                padding-bottom: 1rem;
+
+                a {
+                    color: $word-color-7;
+                }
             }
         }
     }

@@ -16,7 +16,7 @@ import Option2 from "../../assets/images/Option-2.webp";
 import Option3 from "../../assets/images/Option-3.webp";
 import Option4 from "../../assets/images/Option-4.webp";
 import Option5 from "../../assets/images/Option-5.webp";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Rewards = () => {
     document.title = "Starbucks® Rewards - Order Ahead, Endless Extras, Free Coffee: Starbucks Coffee Company";
@@ -25,6 +25,13 @@ export const Rewards = () => {
         optionActive: ["active", "", "", "", ""],
         underlinePosition: "0%"
     });
+
+    const [input, setInput] = useState({
+        text: "",
+        active: "",
+        error: "",
+        haveText: ""
+    })
 
     const GetOption = (e) => {
         const order = parseInt(e.target.getAttribute("order"));
@@ -42,6 +49,63 @@ export const Rewards = () => {
             })
         });
     }
+
+    const HandleChange = (e) => {
+        if (input.text.length > -1) {
+            setInput((prevValue) => ({
+                text: e.target.value,
+                active: "active",
+                error: "",
+                haveText: prevValue.haveText
+            }));
+        }
+    }
+
+    const HandleClickOutside = (e) => {
+        if (e.target.closest("div").classList.contains("star-code-form")) {
+            if (input.error === "error") {
+                setInput((prevValue) => ({
+                    text: prevValue.text,
+                    active: "active",
+                    error: "error",
+                    haveText: ""
+                }));
+            }
+            else {
+                setInput((prevValue) => ({
+                    text: prevValue.text,
+                    active: "active",
+                    error: "",
+                    haveText: ""
+                }));
+            }
+        }
+        else {
+            if (input.text !== "") {
+                setInput((prevValue) => ({
+                    text: prevValue.text,
+                    active: "",
+                    error: "",
+                    haveText: "have-text"
+                }));
+            }
+            else {
+                setInput((prevValue) => ({
+                    text: prevValue.text,
+                    active: "",
+                    error: "error",
+                    haveText: ""
+                }));
+            }
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener("mousedown", HandleClickOutside);
+        return (() => {
+            document.removeEventListener("mousedown", HandleClickOutside);
+        })
+    });
 
     return (
         <>
@@ -252,9 +316,14 @@ export const Rewards = () => {
                     <h2>Star Codes</h2>
                     <p className="intro">Yesssss. You've got Stars in your hand. Enter your code here and we'll add
                         Stars to your account.</p>
-                    <form>
-                        <input type="text" />
-                        <p><span><i className="fa-solid fa-xmark"></i></span>Please enter a Star code.</p>
+                    <form onSubmit={(e) => {e.preventDefault()}}>
+                        <div className={"star-code-input " + input.active + " " + input.error + " " + input.haveText}>
+                            <div className="star-code-form">
+                                <label htmlFor="star-codes">*Enter your Star Code</label>
+                                <input id="star-codes" type="text" onChange={HandleChange} />
+                            </div>
+                            <p><span><i className="fa-solid fa-xmark"></i></span>Please enter a Star code.</p>
+                        </div>
                         <button type="submit">Submit</button>
                     </form>
                 </section>
@@ -262,8 +331,8 @@ export const Rewards = () => {
                 <section className="rewards-section">
                     <h2>Questions</h2>
                     <p className="intro">We want to help in any way we can. You can ask your barista anytime or we've
-                        answered the most commonly asked questions
-                        <a href="/">
+                        answered the most commonly asked
+                        questions <a href="/">
                             right over here
                             <span><i className="fa-solid fa-up-right-from-square"></i></span>
                         </a>
@@ -290,8 +359,8 @@ export const Rewards = () => {
                     <div>
                         <h4>TERMS OF USE</h4>
                         <p>
-                            For full program details visit
-                            <a href="/">
+                            For full program details
+                            visit <a href="/">
                                 starbucks.com/rewards/terms
                                 <span><i className="fa-solid fa-up-right-from-square"></i></span>
                             </a>
@@ -300,12 +369,12 @@ export const Rewards = () => {
                             Starbucks® Rewards Visa® Card: See your Card Rewards Program Agreement 
                             or more details.</p>
                         <p>Starbucks® Rewards benefits are available at participating Starbucks stores.
-                            Not all stores have the ability to honor Rewards at this time. Visit the
-                                <a href="/">
-                                    Starbucks Store Locator
-                                    <span><i className="fa-solid fa-up-right-from-square"></i></span>
-                                </a>
-                            and search for locations honoring “Redeem Rewards”.</p>
+                            Not all stores have the ability to honor Rewards at this time. Visit
+                            the <a href="/">
+                                Starbucks Store Locator
+                                <span><i className="fa-solid fa-up-right-from-square"></i></span>
+                            </a> and
+                        search for locations honoring “Redeem Rewards”.</p>
                         <p>Deposit and credit card products provided by JPMorgan Chase Bank, N.A. Member FDIC</p>
                     </div>
                     <div>

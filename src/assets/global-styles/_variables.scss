@@ -6,6 +6,7 @@
 // 1200px and up: large laptops and desktops
 
 // Colors
+$alizarin: rgb(214, 43, 31);
 $black: rgb(0, 0, 0);
 $dim-gray: rgb(100, 100, 100);
 $jade: rgb(0, 168, 98);
@@ -23,10 +24,14 @@ $background-1: $tranquil;
 $background-2: $palm-green;
 $background-3: $watercourse;
 $background-4: $narvik;
+$background-5: $white;
 $banner-background: $palm-green;
 $btn-border-1: $white;
 $btn-border-2: $palm-green;
+$btn-border-3: $black;
 $close-menu-btn-background: $white-smoke;
+$input-border-1: $watercourse;
+$input-border-2: $alizarin;
 $join-now-btn-background: $black;
 $menu-background: $white;
 $nav-background: $white;
@@ -40,6 +45,7 @@ $word-color-4: $dim-gray;
 $word-color-5: $nero;
 $word-color-6: $watercourse;
 $word-color-7: $jade;
+$word-color-8: $alizarin;
 
 
 @keyframes navbar-toggler-bar-1 {
