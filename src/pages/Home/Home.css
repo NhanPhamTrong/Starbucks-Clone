@@ -386,7 +386,7 @@ main#Home .home-section:nth-child(9) a {
 }
 
 @media only screen and (min-width: 786px) {
-  main .home-section {
+  main#Home .home-section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -394,36 +394,36 @@ main#Home .home-section:nth-child(9) a {
         -ms-flex-align: center;
             align-items: center;
   }
-  main .home-section img {
+  main#Home .home-section img {
     width: 50%;
   }
-  main .home-section .text {
+  main#Home .home-section .text {
     padding: 2rem 3rem;
   }
-  main .home-section .text h2 {
+  main#Home .home-section .text h2 {
     font-size: 1.5rem;
   }
-  main .home-section .text p {
+  main#Home .home-section .text p {
     font-size: 1.1875rem;
   }
-  main .home-section:nth-child(1) p, main .home-section:nth-child(2) p, main .home-section:nth-child(3) p {
+  main#Home .home-section:nth-child(1) p, main#Home .home-section:nth-child(2) p, main#Home .home-section:nth-child(3) p {
     font-size: 1.5rem;
   }
-  main .home-section:nth-child(2) img, main .home-section:nth-child(4) img, main .home-section:nth-child(6) img {
+  main#Home .home-section:nth-child(2) img, main#Home .home-section:nth-child(4) img, main#Home .home-section:nth-child(6) img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  main .home-section:nth-child(2) .text, main .home-section:nth-child(4) .text, main .home-section:nth-child(6) .text {
+  main#Home .home-section:nth-child(2) .text, main#Home .home-section:nth-child(4) .text, main#Home .home-section:nth-child(6) .text {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  main .home-section:nth-child(8) {
+  main#Home .home-section:nth-child(8) {
     display: block;
     padding: 2rem 5rem;
   }
-  main .home-section:nth-child(9) {
+  main#Home .home-section:nth-child(9) {
     padding: 0 5rem;
   }
 }
