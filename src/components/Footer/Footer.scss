@@ -5,7 +5,9 @@ footer {
 
     .dropdown-section {
         .dropdown {
-            position: relative;
+            max-height: 60px;
+            overflow: hidden;
+            transition: 0.4s;
 
             button {
                 width: 100%;
@@ -16,6 +18,8 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                position: relative;
+                z-index: 1;
         
                 span {
                     height: 2.75rem;
@@ -34,47 +38,29 @@ footer {
             }
     
             ul {
-                overflow: hidden;
-                position: relative;
-                width: 100%;
-                left: 0;
-                top: 0;
-    
-                div {
-                    max-height: 0;
-                    transform: translate(0, -100%);
-                    transition: 0.4s;
-                    position: relative;
+                li {
+                    p {
+                        width: fit-content;
+                        margin-bottom: 0.5rem;
+                        padding: 0.5rem 0;
+                        color: $word-color-4;
+                        font-size: 0.875rem;
+                    }
 
-                    li {
-                        p {
-                            width: fit-content;
-                            margin-bottom: 0.5rem;
-                            padding: 0.5rem 0;
-                            color: $word-color-4;
-                            font-size: 0.875rem;
-                        }
-    
-                        p:hover {
-                            color: $word-color-2;
-                        }
+                    p:hover {
+                        color: $word-color-2;
                     }
                 }
             }
         }
 
         .dropdown.active {
+            max-height: 20rem;
+            transition: 0.4s;
+
             button {
                 span {
                     transform: rotateZ(180deg);
-                    transition: 0.4s;
-                }
-            }
-
-            ul {
-                div {
-                    max-height: 999px;
-                    transform: translate(0, 0);
                     transition: 0.4s;
                 }
             }
@@ -143,7 +129,7 @@ footer {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
     footer {
         .dropdown-section {
             button {

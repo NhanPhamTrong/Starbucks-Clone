@@ -256,6 +256,24 @@ ol, ul {
   }
 }
 
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
   font-family: 'Noto Sans TC', sans-serif;
   overflow-x: hidden;
@@ -277,19 +295,24 @@ body.active-navbar {
   }
 }
 
-main#rewards .rewards-section {
+main#Rewards .rewards-section {
   margin-bottom: 4.5rem;
   padding: 0 1rem;
   color: #212121;
 }
 
-main#rewards .rewards-section .intro {
+main#Rewards .rewards-section h2 {
+  font-size: 1.5rem;
+}
+
+main#Rewards .rewards-section .intro {
   padding-top: 1rem;
   font-size: 0.875rem;
 }
 
-main#rewards .banner {
-  padding: 0.4375rem 1rem;
+main#Rewards .rewards-section:nth-child(1) {
+  margin: 0;
+  padding: 0.5rem 1rem;
   background-color: #1e3932;
   color: white;
   display: -webkit-box;
@@ -307,11 +330,11 @@ main#rewards .banner {
   z-index: 10;
 }
 
-main#rewards .banner h1 {
+main#Rewards .rewards-section:nth-child(1) h1 {
   font-size: 0.8125rem;
 }
 
-main#rewards .banner a {
+main#Rewards .rewards-section:nth-child(1) a {
   padding: 0.5rem 1rem;
   border: white solid 1px;
   border-radius: 10rem;
@@ -319,13 +342,13 @@ main#rewards .banner a {
   line-height: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(2) {
+main#Rewards .rewards-section:nth-child(2) {
   padding: 0 0 20rem 0;
-  background: #d4e9e2 url("../../assets/images/Rewards-hero-mobile.webp") no-repeat bottom right;
+  background: #d4e9e2 url("../../assets/images/Rewards-hero-mobile.webp") no-repeat bottom left;
   background-size: 100%;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container {
+main#Rewards .rewards-section:nth-child(2) .heading-container {
   width: 61%;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -339,99 +362,106 @@ main#rewards .rewards-section:nth-child(2) .heading-container {
           flex-direction: column;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container h1 {
+main#Rewards .rewards-section:nth-child(2) .heading-container h1 {
   font-size: 1.75rem;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container .intro {
+main#Rewards .rewards-section:nth-child(2) .heading-container .intro {
   font-size: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container .join-in-app a, main#rewards .rewards-section:nth-child(2) .heading-container .join-online a {
+main#Rewards .rewards-section:nth-child(2) .heading-container .join-in-app a, main#Rewards .rewards-section:nth-child(2) .heading-container .join-online a {
   font-size: 0.875rem;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container .join-in-app {
+main#Rewards .rewards-section:nth-child(2) .heading-container .join-in-app .mobile, main#Rewards .rewards-section:nth-child(2) .heading-container .join-online .mobile {
+  display: inline-block;
+}
+
+main#Rewards .rewards-section:nth-child(2) .heading-container .join-in-app .desktop, main#Rewards .rewards-section:nth-child(2) .heading-container .join-online .desktop {
+  display: none;
+}
+
+main#Rewards .rewards-section:nth-child(2) .heading-container .join-in-app {
   margin-top: 2rem;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container .join-in-app a {
+main#Rewards .rewards-section:nth-child(2) .heading-container .join-in-app a {
   padding: 0.5rem 1rem;
   background-color: #00754a;
   border-radius: 10rem;
   color: white;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container .join-online {
+main#Rewards .rewards-section:nth-child(2) .heading-container .join-online {
   margin-top: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container .join-online a {
+main#Rewards .rewards-section:nth-child(2) .heading-container .join-online a {
   color: black;
   text-decoration: underline;
 }
 
-main#rewards .rewards-section:nth-child(2) .heading-container .join-online a:hover {
+main#Rewards .rewards-section:nth-child(2) .heading-container .join-online a:hover {
   text-decoration: none;
 }
 
-main#rewards .rewards-section:nth-child(3) {
+main#Rewards .rewards-section:nth-child(3) {
   font-size: 0.875rem;
 }
 
-main#rewards .rewards-section:nth-child(3) h2 {
-  font-size: 1.5rem;
+main#Rewards .rewards-section:nth-child(3) h2 {
   text-align: center;
 }
 
-main#rewards .rewards-section:nth-child(3) .intro {
+main#Rewards .rewards-section:nth-child(3) .intro {
   padding-bottom: 3rem;
   text-align: center;
 }
 
-main#rewards .rewards-section:nth-child(3) .getting-started-container .getting-started {
+main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main#rewards .rewards-section:nth-child(3) .getting-started-container .getting-started img {
+main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started img {
   height: 3rem;
   width: 3rem;
   margin-right: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(3) .getting-started-container .getting-started .text h3 {
+main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started .text h3 {
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-main#rewards .rewards-section:nth-child(3) .getting-started-container .getting-started .text p {
+main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started .text p {
   padding-top: 1rem;
   line-height: 1.25rem;
 }
 
-main#rewards .rewards-section:nth-child(3) .getting-started-container .getting-started .text p a {
+main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started .text p a {
   color: #00a862;
   font-size: 0.875rem;
   font-weight: 700;
 }
 
-main#rewards .rewards-section:nth-child(3) .getting-started-container .getting-started:nth-child(2) {
+main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started:nth-child(2) {
   margin: 2rem 0;
 }
 
-main#rewards .rewards-section:nth-child(4) {
+main#Rewards .rewards-section:nth-child(4) {
   padding: 0;
   background-color: rgba(212, 233, 226, 0.3);
 }
 
-main#rewards .rewards-section:nth-child(4) h2 {
+main#Rewards .rewards-section:nth-child(4) h2 {
   padding: 3rem 0 1rem;
   text-align: center;
 }
 
-main#rewards .rewards-section:nth-child(4) .option-btn {
+main#Rewards .rewards-section:nth-child(4) .option-btn {
   display: -ms-grid;
   display: grid;
   grid-auto-columns: minmax(0, 1fr);
@@ -439,7 +469,7 @@ main#rewards .rewards-section:nth-child(4) .option-btn {
   position: relative;
 }
 
-main#rewards .rewards-section:nth-child(4) .option-btn button {
+main#Rewards .rewards-section:nth-child(4) .option-btn button {
   padding: 0.5rem 0 1rem;
   background-color: transparent;
   border: none;
@@ -447,13 +477,13 @@ main#rewards .rewards-section:nth-child(4) .option-btn button {
   font-weight: 700;
 }
 
-main#rewards .rewards-section:nth-child(4) .option-btn button span {
+main#Rewards .rewards-section:nth-child(4) .option-btn button span {
   color: #cba258;
   font-size: 0.65rem;
   pointer-events: none;
 }
 
-main#rewards .rewards-section:nth-child(4) .option-btn .underline {
+main#Rewards .rewards-section:nth-child(4) .option-btn .underline {
   height: 0.25rem;
   width: 20%;
   background-color: #00754a;
@@ -464,151 +494,148 @@ main#rewards .rewards-section:nth-child(4) .option-btn .underline {
   transition: 0.4s;
 }
 
-main#rewards .rewards-section:nth-child(4) .option {
-  height: 28rem;
+main#Rewards .rewards-section:nth-child(4) .option {
   padding: 2rem 0;
   background-color: #d4e9e2;
-  position: relative;
 }
 
-main#rewards .rewards-section:nth-child(4) .option .content {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+main#Rewards .rewards-section:nth-child(4) .option .content {
+  display: none;
+  -webkit-animation: fadeEffect 0.4s;
+          animation: fadeEffect 0.4s;
 }
 
-main#rewards .rewards-section:nth-child(4) .option .content img {
+main#Rewards .rewards-section:nth-child(4) .option .content img {
   width: 100%;
   padding: 1rem 0;
 }
 
-main#rewards .rewards-section:nth-child(4) .option .content h3, main#rewards .rewards-section:nth-child(4) .option .content p {
+main#Rewards .rewards-section:nth-child(4) .option .content .text h3, main#Rewards .rewards-section:nth-child(4) .option .content .text p {
   padding: 0 1rem;
   line-height: 1.25rem;
   text-align: center;
 }
 
-main#rewards .rewards-section:nth-child(4) .option .content h3 {
+main#Rewards .rewards-section:nth-child(4) .option .content .text h3 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
 
-main#rewards .rewards-section:nth-child(4) .option .content p {
+main#Rewards .rewards-section:nth-child(4) .option .content .text p {
   font-size: 0.875rem;
 }
 
-main#rewards .rewards-section:nth-child(4) .option .content.active {
-  opacity: 1;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+main#Rewards .rewards-section:nth-child(4) .option .content.active {
+  display: block;
+  -webkit-animation: fadeEffect 0.4s;
+          animation: fadeEffect 0.4s;
 }
 
-main#rewards .rewards-section:nth-child(5) {
+main#Rewards .rewards-section:nth-child(5) {
   font-size: 0.875rem;
 }
 
-main#rewards .rewards-section:nth-child(5) h2, main#rewards .rewards-section:nth-child(5) .intro {
+main#Rewards .rewards-section:nth-child(5) h2, main#Rewards .rewards-section:nth-child(5) .intro {
   text-align: center;
 }
 
-main#rewards .rewards-section:nth-child(5) .endless-extras-container {
+main#Rewards .rewards-section:nth-child(5) .endless-extras-container {
   padding-top: 3rem;
 }
 
-main#rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras {
+main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main#rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras button {
+main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras button {
   background-color: transparent;
   padding: 0 1rem 1rem 0;
   border: none;
 }
 
-main#rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras button img {
+main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras button img {
   height: 7rem;
   width: 7rem;
 }
 
-main#rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras .text p {
+main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras .text p {
   margin: 1rem 0;
 }
 
-main#rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras .text a {
+main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras .text a {
   color: #00754a;
   text-decoration: underline;
 }
 
-main#rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras .text a:hover {
+main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras .text a:hover {
   text-decoration: none;
 }
 
-main#rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras:nth-child(2) {
+main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras:nth-child(2) {
   padding: 2rem 0;
 }
 
-main#rewards .rewards-section:nth-child(6) {
+main#Rewards .rewards-section:nth-child(6) {
   padding: 3rem 1rem;
   background-color: #f2f0eb;
 }
 
-main#rewards .rewards-section:nth-child(6) h2, main#rewards .rewards-section:nth-child(6) .intro {
+main#Rewards .rewards-section:nth-child(6) h2, main#Rewards .rewards-section:nth-child(6) .intro {
   text-align: center;
 }
 
-main#rewards .rewards-section:nth-child(6) .earn-stars-container {
+main#Rewards .rewards-section:nth-child(6) .earn-stars-container {
   margin-top: 4rem;
 }
 
-main#rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars h3 span {
+main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .title h3 span {
   font-size: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars p {
+main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .title p {
   font-size: 0.875rem;
 }
 
-main#rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .content {
+main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .container .content {
   margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main#rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .content img {
+main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .container .content img {
+  height: 10rem;
   width: 7rem;
   margin-right: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .content .text h4 {
+main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .container .content .text h4 {
   margin-bottom: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .content .text p a {
+main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .container .content .text p a {
   color: #00754a;
 }
 
-main#rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars:nth-child(2) {
+main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars:nth-child(2) {
   padding: 3.5rem 0;
 }
 
-main#rewards .rewards-section:nth-child(7) form {
+main#Rewards .rewards-section:nth-child(7) form {
   padding-top: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input {
   padding: 0.75rem 0;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input .star-code-form {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input .star-code-form {
   position: relative;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input .star-code-form label {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input .star-code-form label {
   background-color: white;
   pointer-events: none;
   position: absolute;
@@ -620,7 +647,7 @@ main#rewards .rewards-section:nth-child(7) form .star-code-input .star-code-form
   transition: 0.2s;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input .star-code-form input {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input .star-code-form input {
   width: 100%;
   padding: 0.75rem 1rem;
   border: #646464 solid 1px;
@@ -628,7 +655,7 @@ main#rewards .rewards-section:nth-child(7) form .star-code-input .star-code-form
   outline: none;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input p {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input p {
   padding-left: 1rem;
   display: none;
   -webkit-box-align: center;
@@ -637,13 +664,13 @@ main#rewards .rewards-section:nth-child(7) form .star-code-input p {
   font-size: 0.75rem;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input p span {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input p span {
   margin-right: 0.5rem;
   color: #d62b1f;
   font-size: 1.25rem;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.have-text .star-code-form label {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.have-text .star-code-form label {
   padding: 0 0.25rem;
   font-size: 0.8125rem;
   top: 0;
@@ -653,7 +680,7 @@ main#rewards .rewards-section:nth-child(7) form .star-code-input.have-text .star
   transition: 0.2s;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.active .star-code-form label {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.active .star-code-form label {
   padding: 0 0.25rem;
   color: #00754a;
   font-size: 0.8125rem;
@@ -664,15 +691,15 @@ main#rewards .rewards-section:nth-child(7) form .star-code-input.active .star-co
   transition: 0.2s;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.active .star-code-form input {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.active .star-code-form input {
   border: #00754a solid 2px;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.error {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.error {
   padding: 0.75rem 0 0;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.error .star-code-form label {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.error .star-code-form label {
   color: #d62b1f;
   font-size: 1rem;
   top: 50%;
@@ -680,17 +707,17 @@ main#rewards .rewards-section:nth-child(7) form .star-code-input.error .star-cod
           transform: translate(0, -50%);
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.error .star-code-form input {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.error .star-code-form input {
   border: #d62b1f solid 2px;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.error p {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.error p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.active.error .star-code-form label {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.active.error .star-code-form label {
   padding: 0 0.25rem;
   color: #d62b1f;
   font-size: 0.8125rem;
@@ -701,11 +728,11 @@ main#rewards .rewards-section:nth-child(7) form .star-code-input.active.error .s
   transition: 0.2s;
 }
 
-main#rewards .rewards-section:nth-child(7) form .star-code-input.active.error .star-code-form input {
+main#Rewards .rewards-section:nth-child(7) form .star-code-input.active.error .star-code-form input {
   border: #d62b1f solid 2px;
 }
 
-main#rewards .rewards-section:nth-child(7) form button {
+main#Rewards .rewards-section:nth-child(7) form button {
   margin: 0.5rem 0 0 auto;
   padding: 0.5rem 1rem;
   background-color: transparent;
@@ -716,34 +743,247 @@ main#rewards .rewards-section:nth-child(7) form button {
   font-weight: 700;
 }
 
-main#rewards .rewards-section:nth-child(7) form button:hover {
+main#Rewards .rewards-section:nth-child(7) form button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-main#rewards .rewards-section:nth-child(8) p {
+main#Rewards .rewards-section:nth-child(8) p {
   color: #646464;
   line-height: 1.25rem;
 }
 
-main#rewards .rewards-section:nth-child(8) p a {
+main#Rewards .rewards-section:nth-child(8) p a {
   color: #00a862;
 }
 
-main#rewards .rewards-section:nth-child(9) p, main#rewards .rewards-section:nth-child(9) h4 {
+main#Rewards .rewards-section:nth-child(9) p, main#Rewards .rewards-section:nth-child(9) h4 {
   color: #646464;
   font-size: 0.8125rem;
   line-height: 1.25rem;
 }
 
-main#rewards .rewards-section:nth-child(9) p {
+main#Rewards .rewards-section:nth-child(9) p {
   padding-bottom: 2rem;
 }
 
-main#rewards .rewards-section:nth-child(9) div p, main#rewards .rewards-section:nth-child(9) div h4 {
+main#Rewards .rewards-section:nth-child(9) div p, main#Rewards .rewards-section:nth-child(9) div h4 {
   padding-bottom: 1rem;
 }
 
-main#rewards .rewards-section:nth-child(9) div p a, main#rewards .rewards-section:nth-child(9) div h4 a {
+main#Rewards .rewards-section:nth-child(9) div p a, main#Rewards .rewards-section:nth-child(9) div h4 a {
   color: #00a862;
+}
+
+@media only screen and (min-width: 786px) {
+  main#Rewards .rewards-section {
+    margin-bottom: 8rem;
+    padding: 0 2.5rem;
+  }
+  main#Rewards .rewards-section h2 {
+    font-size: 1.75rem;
+  }
+  main#Rewards .rewards-section .intro {
+    padding-top: 1rem;
+    font-size: 1rem;
+  }
+  main#Rewards .rewards-section:nth-child(2) {
+    padding: 7rem 0;
+    background: #d4e9e2 url("../../assets/images/Rewards-hero-desktop.webp") no-repeat center right 45%;
+    background-size: cover;
+  }
+  main#Rewards .rewards-section:nth-child(2) .heading-container {
+    margin: 0;
+    padding: 2rem 1.5rem;
+    text-align: left;
+  }
+  main#Rewards .rewards-section:nth-child(2) .heading-container h1 {
+    font-size: 2.25rem;
+  }
+  main#Rewards .rewards-section:nth-child(2) .heading-container .join-in-app .mobile, main#Rewards .rewards-section:nth-child(2) .heading-container .join-online .mobile {
+    display: none;
+  }
+  main#Rewards .rewards-section:nth-child(2) .heading-container .join-in-app .desktop, main#Rewards .rewards-section:nth-child(2) .heading-container .join-online .desktop {
+    display: inline-block;
+  }
+  main#Rewards .rewards-section:nth-child(3) h2, main#Rewards .rewards-section:nth-child(3) .intro {
+    width: 50%;
+    margin: 0 auto;
+  }
+  main#Rewards .rewards-section:nth-child(3) .getting-started-container {
+    padding: 0 6%;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 3rem;
+  }
+  main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started {
+    margin: 0 !important;
+    display: block;
+    text-align: center;
+  }
+  main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started img {
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started .text h3 {
+    font-size: 1.1875rem;
+  }
+  main#Rewards .rewards-section:nth-child(3) .getting-started-container .getting-started .text p {
+    font-size: 0.875rem;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option-btn {
+    width: 34rem;
+    margin: 0 auto;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option-btn button {
+    font-size: 1.5rem;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option-btn button span {
+    font-size: 0.875rem;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option {
+    width: 80%;
+    margin: 0 auto;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option .content img {
+    width: 23.5rem;
+    margin-right: 1.5rem;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option .content .text h3, main#Rewards .rewards-section:nth-child(4) .option .content .text p {
+    text-align: left;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option .content .text h3 {
+    font-size: 1.5rem;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option .content .text p {
+    font-size: 1rem;
+  }
+  main#Rewards .rewards-section:nth-child(4) .option .content.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main#Rewards .rewards-section:nth-child(5) h2, main#Rewards .rewards-section:nth-child(5) .intro {
+    width: 50%;
+    margin: 0 auto;
+  }
+  main#Rewards .rewards-section:nth-child(5) .endless-extras-container {
+    padding: 3rem 6% 0;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 3rem;
+  }
+  main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras {
+    padding: 0 !important;
+    display: block;
+    text-align: center;
+  }
+  main#Rewards .rewards-section:nth-child(5) .endless-extras-container .endless-extras button {
+    padding: 0;
+    padding-bottom: 1.5rem;
+  }
+  main#Rewards .rewards-section:nth-child(6) h2, main#Rewards .rewards-section:nth-child(6) .intro {
+    width: 50%;
+    margin: 0 auto;
+  }
+  main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars {
+    display: -ms-grid;
+    display: grid;
+  }
+  main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .title {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    width: 10rem;
+  }
+  main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .container {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+  }
+  main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .container .content {
+    margin-top: 0;
+  }
+  main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars:nth-child(3) .container .content {
+    width: 50%;
+  }
+  main#Rewards .rewards-section:nth-child(7), main#Rewards .rewards-section:nth-child(8) {
+    width: 50%;
+    margin-left: 10rem;
+  }
+  main#Rewards .rewards-section:nth-child(9) {
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 2rem;
+  }
+  main#Rewards .rewards-section:nth-child(9) div:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  main#Rewards .rewards-section:nth-child(9) div:nth-child(2) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  main#Rewards .rewards-section:nth-child(9) div:nth-child(3) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  main#Rewards .rewards-section:nth-child(9) div:nth-child(4) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  main#Rewards .rewards-section:nth-child(9) div:nth-child(5) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main#Rewards {
+    margin-top: 6.25rem;
+    padding-top: 3.125rem;
+  }
+  main#Rewards .rewards-section:nth-child(1) {
+    height: 3.125rem;
+    width: 100%;
+    padding-left: 7rem;
+    position: fixed;
+    top: 6.25rem;
+  }
+  main#Rewards .rewards-section:nth-child(1) h1 {
+    font-size: 1rem;
+  }
+  main#Rewards .rewards-section:nth-child(1) a {
+    display: none;
+  }
+  main#Rewards .rewards-section:nth-child(6) .earn-stars-container .earn-stars .container {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
 }
 /*# sourceMappingURL=Rewards.css.map */

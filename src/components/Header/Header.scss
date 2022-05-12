@@ -296,7 +296,7 @@ header {
             position: relative;
 
             a {
-                padding: 2rem 0;
+                padding: 2.5rem 0;
             }
 
             .nav-container {
@@ -367,5 +367,15 @@ header {
         nav, nav.active {
             background-color: transparent;
         }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        width: 100%;
+        background-color: $background-5;
+        position: fixed;
+        top: 0;
+        z-index: 10;
     }
 }

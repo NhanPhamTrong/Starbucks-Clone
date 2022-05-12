@@ -256,6 +256,24 @@ ol, ul {
   }
 }
 
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
   font-family: 'Noto Sans TC', sans-serif;
   overflow-x: hidden;
@@ -277,37 +295,37 @@ body.active-navbar {
   }
 }
 
-main#home {
+main#Home {
   padding: 0 0 2rem;
 }
 
-main#home .home-section {
+main#Home .home-section {
   margin: 2rem 0;
   color: #1e3932;
   text-align: center;
 }
 
-main#home .home-section img {
+main#Home .home-section img {
   width: 100%;
 }
 
-main#home .home-section .text {
+main#Home .home-section .text {
   padding: 2rem 1rem;
 }
 
-main#home .home-section .text h1 {
+main#Home .home-section .text h1 {
   font-size: 1.75rem;
 }
 
-main#home .home-section .text h2 {
+main#Home .home-section .text h2 {
   font-size: 1.375rem;
 }
 
-main#home .home-section .text p {
+main#Home .home-section .text p {
   margin: 1.5rem 0 2rem;
 }
 
-main#home .home-section .text a, main#home .home-section .text button {
+main#Home .home-section .text a, main#Home .home-section .text button {
   padding: 0.5rem 1rem;
   background-color: transparent;
   border: #1e3932 solid 1px;
@@ -317,57 +335,57 @@ main#home .home-section .text a, main#home .home-section .text button {
   line-height: 1rem;
 }
 
-main#home .home-section .text a:hover, main#home .home-section .text button:hover {
+main#Home .home-section .text a:hover, main#Home .home-section .text button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-main#home .home-section .text span {
+main#Home .home-section .text span {
   font-weight: 700;
 }
 
-main#home .home-section:nth-child(1) p, main#home .home-section:nth-child(2) p, main#home .home-section:nth-child(3) p {
+main#Home .home-section:nth-child(1) p, main#Home .home-section:nth-child(2) p, main#Home .home-section:nth-child(3) p {
   font-size: 1.375rem;
 }
 
-main#home .home-section:nth-child(1), main#home .home-section:nth-child(4), main#home .home-section:nth-child(5), main#home .home-section:nth-child(6), main#home .home-section:nth-child(7) {
+main#Home .home-section:nth-child(1), main#Home .home-section:nth-child(4), main#Home .home-section:nth-child(5), main#Home .home-section:nth-child(6), main#Home .home-section:nth-child(7) {
   background-color: #d4e9e2;
 }
 
-main#home .home-section:nth-child(2), main#home .home-section:nth-child(3) {
+main#Home .home-section:nth-child(2), main#Home .home-section:nth-child(3) {
   background-color: #1e3932;
   color: white;
 }
 
-main#home .home-section:nth-child(2) a, main#home .home-section:nth-child(2) button, main#home .home-section:nth-child(3) a, main#home .home-section:nth-child(3) button {
+main#Home .home-section:nth-child(2) a, main#Home .home-section:nth-child(2) button, main#Home .home-section:nth-child(3) a, main#Home .home-section:nth-child(3) button {
   border: white solid 1px;
   color: white;
 }
 
-main#home .home-section:nth-child(2) a:hover, main#home .home-section:nth-child(2) button:hover, main#home .home-section:nth-child(3) a:hover, main#home .home-section:nth-child(3) button:hover {
+main#Home .home-section:nth-child(2) a:hover, main#Home .home-section:nth-child(2) button:hover, main#Home .home-section:nth-child(3) a:hover, main#Home .home-section:nth-child(3) button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-main#home .home-section:nth-child(1) {
+main#Home .home-section:nth-child(1) {
   color: black;
 }
 
-main#home .home-section:nth-child(8) {
+main#Home .home-section:nth-child(8) {
   padding: 2rem 1rem;
   font-size: 0.8125rem;
 }
 
-main#home .home-section:nth-child(9) {
+main#Home .home-section:nth-child(9) {
   margin: 0;
   padding: 0 1rem;
   font-size: 0.8125rem;
 }
 
-main#home .home-section:nth-child(9) a {
+main#Home .home-section:nth-child(9) a {
   color: black;
   text-decoration: underline;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
   main .home-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -407,6 +425,12 @@ main#home .home-section:nth-child(9) a {
   }
   main .home-section:nth-child(9) {
     padding: 0 5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main#Home {
+    padding-top: 6.25rem;
   }
 }
 /*# sourceMappingURL=Home.css.map */

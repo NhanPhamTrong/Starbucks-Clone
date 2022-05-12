@@ -15,7 +15,7 @@ export const Footer = () => {
                         <span><i className="fa-solid fa-angle-down"></i></span>
                     </button>
                     <ul>
-                        <div>
+                        {/* <div> */}
                             <li>
                                 <p>Our Company</p>
                             </li>
@@ -34,7 +34,7 @@ export const Footer = () => {
                             <li>
                                 <p>Customer Service</p>
                             </li>
-                        </div>
+                        {/* </div> */}
                     </ul>
                 </div>
                 <div className="dropdown">

@@ -17,7 +17,7 @@ export const Home = () => {
     return (
         <>
             <Header />
-            <main id="home">
+            <main id="Home">
                 <section className="home-section">
                     <img src={Home1} alt="" />
                     <div className="text">

@@ -1,6 +1,6 @@
 @import "../../assets/global-styles/global-styles";
 
-main#home {
+main#Home {
     padding: 0 0 2rem;
 
     .home-section {
@@ -92,7 +92,7 @@ main#home {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
     main {
         .home-section {
             display: flex;
@@ -139,5 +139,11 @@ main#home {
         .home-section:nth-child(9) {
             padding: 0 5rem;
         }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main#Home {
+        padding-top: 6.25rem;
     }
 }

@@ -256,6 +256,24 @@ ol, ul {
   }
 }
 
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
   font-family: 'Noto Sans TC', sans-serif;
   overflow-x: hidden;
@@ -282,7 +300,10 @@ footer {
 }
 
 footer .dropdown-section .dropdown {
-  position: relative;
+  max-height: 60px;
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 footer .dropdown-section .dropdown button {
@@ -300,6 +321,8 @@ footer .dropdown-section .dropdown button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
 footer .dropdown-section .dropdown button span {
@@ -325,24 +348,7 @@ footer .dropdown-section .dropdown button span:hover {
   transition: 0.4s;
 }
 
-footer .dropdown-section .dropdown ul {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-
-footer .dropdown-section .dropdown ul div {
-  max-height: 0;
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  position: relative;
-}
-
-footer .dropdown-section .dropdown ul div li p {
+footer .dropdown-section .dropdown ul li p {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -352,21 +358,19 @@ footer .dropdown-section .dropdown ul div li p {
   font-size: 0.875rem;
 }
 
-footer .dropdown-section .dropdown ul div li p:hover {
+footer .dropdown-section .dropdown ul li p:hover {
   color: black;
+}
+
+footer .dropdown-section .dropdown.active {
+  max-height: 20rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 footer .dropdown-section .dropdown.active button span {
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-footer .dropdown-section .dropdown.active ul div {
-  max-height: 999px;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -444,7 +448,7 @@ footer .copyright {
   font-size: 0.8125rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
   footer .dropdown-section button {
     font-size: 1.1875rem;
   }

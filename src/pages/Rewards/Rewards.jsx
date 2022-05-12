@@ -125,8 +125,8 @@ export const Rewards = () => {
     return (
         <>
             <Header rewardsActive="active"/>
-            <main id="rewards">
-                <section className="banner">
+            <main id="Rewards">
+                <section className="rewards-section">
                     <h1>STARBUCKS® REWARDS</h1>
                     <a href="/">Join in the app</a>
                 </section>
@@ -136,10 +136,12 @@ export const Rewards = () => {
                         <h1>FREE COFFEE <br /> IS A TAP AWAY</h1>
                         <p className="intro">Join now to start earning Rewards</p>
                         <div className="join-in-app">
-                            <a href="/">Join in the app</a>
+                            <a className="desktop" href="/">Join now</a>
+                            <a className="mobile" href="/">Join in the app</a>
                         </div>
                         <div className="join-online">
-                            <a href="/">Or join online</a>
+                            <p className="desktop">Or <a href="/">Or join online</a> for the best experience</p>
+                            <a className="mobile" href="/">Or join online</a>
                         </div>
                     </div>
                 </section>
@@ -188,32 +190,42 @@ export const Rewards = () => {
                     <div className="option">
                         <div className={"content " + option.optionActive[0]}>
                             <img src={Option1} alt="" />
-                            <h3>Customize your drink</h3>
-                            <p>Make your drink just right with an extra espresso shot, dairy substitute
-                                or a dash of your favorite syrup.</p>
+                            <div className="text">
+                                <h3>Customize your drink</h3>
+                                <p>Make your drink just right with an extra espresso shot, dairy substitute
+                                    or a dash of your favorite syrup.</p>
+                            </div>
                         </div>
                         <div className={"content " + option.optionActive[1]}>
                             <img src={Option2} alt="" />
-                            <h3>Brewed hot coffee, bakery item or hot tea</h3>
-                            <p>Pair coffee cake or an almond croissant with your fresh cup of hot brew.</p>
+                            <div className="text">
+                                <h3>Brewed hot coffee, bakery item or hot tea</h3>
+                                <p>Pair coffee cake or an almond croissant with your fresh cup of hot brew.</p>
+                            </div>
                         </div>
                         <div className={"content " + option.optionActive[2]}>
                             <img src={Option3} alt="" />
-                            <h3>Handcrafted drink, hot breakfast or parfait</h3>
-                            <p>Have a really good morning with a breakfast sandwich, oatmeal or your
-                                favorite drink.</p>
+                            <div className="text">
+                                <h3>Handcrafted drink, hot breakfast or parfait</h3>
+                                <p>Have a really good morning with a breakfast sandwich, oatmeal or your
+                                    favorite drink.</p>
+                            </div>
                         </div>
                         <div className={"content " + option.optionActive[3]}>
                             <img src={Option4} alt="" />
-                            <h3>Salad, sandwich or protein box</h3>
-                            <p>Nourish your day with a hearty Chipotle Chicken Wrap or Eggs & Cheese
-                                Protein Box.</p>
+                            <div className="text">
+                                <h3>Salad, sandwich or protein box</h3>
+                                <p>Nourish your day with a hearty Chipotle Chicken Wrap or Eggs & Cheese
+                                    Protein Box.</p>
+                            </div>
                         </div>
                         <div className={"content " + option.optionActive[4]}>
                             <img src={Option5} alt="" />
-                            <h3>Select merchandise or at-home coffee</h3>
-                            <p>Take home a signature cup, a bag of coffee or your choice of select
-                                coffee accessories.</p>
+                            <div className="text">
+                                <h3>Select merchandise or at-home coffee</h3>
+                                <p>Take home a signature cup, a bag of coffee or your choice of select
+                                    coffee accessories.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -265,62 +277,74 @@ export const Rewards = () => {
                         Stars add up to (really delicious) Rewards.</p>
                     <div className="earn-stars-container">
                         <div className="earn-stars">
-                            <h3>1 <span><i className="fa-solid fa-star"></i></span> per dollar</h3>
-                            <p>Pay as you go</p>
-                            <div className="content">
-                                <img src={EarnStars1} alt="" />
-                                <div className="text">
-                                    <h4>Scan and pay separately</h4>
-                                    <p>Use cash or credit/debit card at the register.</p>
-                                </div>
+                            <div className="title">
+                                <h3>1 <span><i className="fa-solid fa-star"></i></span> per dollar</h3>
+                                <p>Pay as you go</p>
                             </div>
-                            <div className="content">
-                                <img src={EarnStars2} alt="" />
-                                <div className="text">
-                                    <h4>Save payment in the app</h4>
-                                    <p>Check-out faster by saving a credit/debit card or PayPal to your
-                                        account. You'll be able to order ahead or scan and pay at the
-                                        register in one step.</p>
+                            <div className="container">
+                                <div className="content">
+                                    <img src={EarnStars1} alt="" />
+                                    <div className="text">
+                                        <h4>Scan and pay separately</h4>
+                                        <p>Use cash or credit/debit card at the register.</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="earn-stars">
-                            <h3>2 <span><i className="fa-solid fa-star"></i></span> per dollar</h3>
-                            <p>Add funds in the app</p>
-                            <div className="content">
-                                <img src={EarnStars3} alt="" />
-                                <div className="text">
-                                    <h4>Preload</h4>
-                                    <p>To save time and earn Stars twice as fast, add money to your digital
-                                        Starbucks Card using any payment option. Scan and pay in one step
-                                        or order ahead in the app.</p>
-                                </div>
-                            </div>
-                            <div className="content">
-                                <img src={EarnStars4} alt="" />
-                                <div className="text">
-                                    <h4>Register your gift card</h4>
-                                    <p>Then use it to pay through the app. You can even consolidate balances
-                                        from multiple cards in one place.</p>
+                                <div className="content">
+                                    <img src={EarnStars2} alt="" />
+                                    <div className="text">
+                                        <h4>Save payment in the app</h4>
+                                        <p>Check-out faster by saving a credit/debit card or PayPal to your
+                                            account. You'll be able to order ahead or scan and pay at the
+                                            register in one step.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="earn-stars">
-                            <h3>3 <span><i className="fa-solid fa-star"></i></span> per dollar</h3>
-                            <p>With Starbucks® Rewards Visa® Card</p>
-                            <div className="content">
-                                <img src={EarnStars5} alt="" />
-                                <div className="text">
-                                    <h4>Earn Stars even faster</h4>
-                                    <p>Earn Stars on all purchases you make with
-                                        our <a href="/">
-                                            credit card
-                                            <span><i className="fa-solid fa-up-right-from-square"></i></span>
-                                        </a> opens
-                                        in new window in and outside of Starbucks. Earn 1 Star per $1
-                                        when you digitally preload your Starbucks Card with your Starbucks®
-                                        Rewards Visa® Card, and earn 2 Stars per $1 when you pay with that
-                                        preloaded Starbucks Card.</p>
+                            <div className="title">
+                                <h3>2 <span><i className="fa-solid fa-star"></i></span> per dollar</h3>
+                                <p>Add funds in the app</p>
+                            </div>
+                            <div className="container">
+                                <div className="content">
+                                    <img src={EarnStars3} alt="" />
+                                    <div className="text">
+                                        <h4>Preload</h4>
+                                        <p>To save time and earn Stars twice as fast, add money to your digital
+                                            Starbucks Card using any payment option. Scan and pay in one step
+                                            or order ahead in the app.</p>
+                                    </div>
+                                </div>
+                                <div className="content">
+                                    <img src={EarnStars4} alt="" />
+                                    <div className="text">
+                                        <h4>Register your gift card</h4>
+                                        <p>Then use it to pay through the app. You can even consolidate balances
+                                            from multiple cards in one place.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="earn-stars">
+                            <div className="title">
+                                <h3>3 <span><i className="fa-solid fa-star"></i></span> per dollar</h3>
+                                <p>With Starbucks® Rewards Visa® Card</p>
+                            </div>
+                            <div className="container">
+                                <div className="content">
+                                    <img src={EarnStars5} alt="" />
+                                    <div className="text">
+                                        <h4>Earn Stars even faster</h4>
+                                        <p>Earn Stars on all purchases you make with
+                                            our <a href="/">
+                                                credit card
+                                                <span><i className="fa-solid fa-up-right-from-square"></i></span>
+                                            </a> opens
+                                            in new window in and outside of Starbucks. Earn 1 Star per $1
+                                            when you digitally preload your Starbucks Card with your Starbucks®
+                                            Rewards Visa® Card, and earn 2 Stars per $1 when you pay with that
+                                            preloaded Starbucks Card.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +379,9 @@ export const Rewards = () => {
                 </section>
 
                 <section className="rewards-section">
-                    <p>At participating stores. Restrictions apply.</p>
+                    <div>
+                        <p>At participating stores. Restrictions apply.</p>
+                    </div>
                     <div>
                         <h4>EARNING STARS</h4>
                         <p>Stars cannot be earned on purchases of alcohol, Starbucks Cards or Starbucks
