@@ -253,6 +253,12 @@ export const GiftCards = () => {
         cardSection.numberOfShownCards = GetNumberOfShownCards();
         cardSection.slideWidth = GetSlideWidth();
 
+        for (let i = 0; i < cardSection.slidePosition.length; i++) {
+            if (giftCard[i].cardList.length - cardSection.slidePosition[i] < cardSection.numberOfShownCards) {
+                cardSection.slidePosition[i] = giftCard[i].cardList.length - cardSection.numberOfShownCards;
+            }
+        }
+
         setCardSection(prevValue => ({
             numberOfShownCards: prevValue.numberOfShownCards,
             slidePosition: [...prevValue.slidePosition],
