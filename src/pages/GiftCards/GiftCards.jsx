@@ -170,19 +170,19 @@ export const GiftCards = () => {
 
     const GetSlideWidth = () => {
         if (window.innerWidth < 475) {
-            return "calc(((17px + 0.5rem + 1rem - 100vw)) * "
+            return "calc((17px + 0.5rem + 1rem - 100vw) / 2 * "
         }
         else if (window.innerWidth < 786) {
-            return "calc(((17px  + 0.5rem + 1rem + 2.5rem) - 100vw) * "
+            return "calc((17px  + 0.5rem + 1rem + 2.5rem - 100vw) / 3 * "
         }
         else if (window.innerWidth < 1024) {
-            return "calc(((17px + 1rem + 2.5rem + 6.625rem) - 100vw) * "
+            return "calc((17px + 1rem + 2.5rem + 6.625rem - 100vw) / 3 * "
         }
         else if (window.innerWidth < 1280) {
-            return "calc(((17px + 1.5rem + (2.5rem - 0.5rem) + 6.625rem) - 100vw) * "
+            return "calc((17px + 1.5rem + (2.5rem - 0.5rem) + 6.625rem - 100vw) / 4 * "
         }
         else {
-            return "calc(((17px + 1.5rem + 2.5rem + 2rem + 6.125rem) - 100vw) * "
+            return "calc((17px + 1.5rem + 2.5rem + 2rem + 6.125rem - 100vw) / 4 * "
         }
     }
 
@@ -227,7 +227,7 @@ export const GiftCards = () => {
                 document.querySelectorAll(".left-btn")[i].style.display = "block";
             }
 
-            if (giftCard[i].cardList.length - cardSection.slidePosition[i] * cardSection.numberOfShownCards <= cardSection.numberOfShownCards) {
+            if (giftCard[i].cardList.length - cardSection.slidePosition[i] <= cardSection.numberOfShownCards) {
                 document.querySelectorAll(".right-btn")[i].style.display = "none";
             }
             else {
@@ -241,7 +241,7 @@ export const GiftCards = () => {
             for (let j = 0; j < giftCard[i].cardList.length; j++) {
                 cardShown[i][j] = "";
             }
-            for (let j = cardSection.slidePosition[i] * cardSection.numberOfShownCards; j < (cardSection.slidePosition[i] + 1) * cardSection.numberOfShownCards; j++) {
+            for (let j = cardSection.slidePosition[i]; j < cardSection.slidePosition[i] + cardSection.numberOfShownCards; j++) {
                 cardShown[i][j] = "shown";
             }
         }
@@ -252,12 +252,6 @@ export const GiftCards = () => {
     const HandleResize = () => {
         cardSection.numberOfShownCards = GetNumberOfShownCards();
         cardSection.slideWidth = GetSlideWidth();
-
-        for (let i = 0; i < cardSection.slidePosition.length; i++) {
-            if (cardSection.slidePosition[i] > giftCard[i].cardList.length / cardSection.numberOfShownCards - 1) {
-                cardSection.slidePosition[i] = giftCard[i].cardList.length / cardSection.numberOfShownCards - 1;
-            }
-        }
 
         setCardSection(prevValue => ({
             numberOfShownCards: prevValue.numberOfShownCards,
@@ -285,10 +279,10 @@ export const GiftCards = () => {
 
         const order = parseInt(e.target.closest(".card-section").getAttribute("order"));
 
-        if (cardSection.slidePosition[order] >= 1) {
-            cardSection.slidePosition[order] -= 1;
+        if (cardSection.slidePosition[order] >= cardSection.numberOfShownCards) {
+            cardSection.slidePosition[order] -= cardSection.numberOfShownCards;
         }
-        else if (cardSection.slidePosition[order] < 1 && cardSection.slidePosition[order] > 0) {
+        else if (cardSection.slidePosition[order] < cardSection.numberOfShownCards) {
             cardSection.slidePosition[order] = 0;
         }
 
@@ -307,12 +301,12 @@ export const GiftCards = () => {
         
         const order = parseInt(e.target.closest(".card-section").getAttribute("order"));
 
-        if ((cardSection.slidePosition[order] + 1) * cardSection.numberOfShownCards < giftCard[order].cardList.length) {
-            if (giftCard[order].cardList.length - (cardSection.slidePosition[order] + 1) * cardSection.numberOfShownCards < cardSection.numberOfShownCards) {
-                cardSection.slidePosition[order] += ((giftCard[order].cardList.length % cardSection.numberOfShownCards) / cardSection.numberOfShownCards);
+        if (cardSection.slidePosition[order] + cardSection.numberOfShownCards < giftCard[order].cardList.length) {
+            if (giftCard[order].cardList.length - (cardSection.slidePosition[order] + cardSection.numberOfShownCards) < cardSection.numberOfShownCards) {
+                cardSection.slidePosition[order] += (giftCard[order].cardList.length - cardSection.slidePosition[order] - cardSection.numberOfShownCards);
             }
             else {
-                cardSection.slidePosition[order] += 1;
+                cardSection.slidePosition[order] += cardSection.numberOfShownCards;
             }
         }
 

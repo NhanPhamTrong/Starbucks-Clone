@@ -84,8 +84,10 @@ main#Gift-cards {
             button {
                 height: 2.5rem;
                 width: 2.5rem;
+                background-color: $background-5;
                 border: none;
                 border-radius: 10rem;
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
                 font-size: 1.5rem;
                 position: absolute;
                 top: 50%;
@@ -119,12 +121,17 @@ main#Gift-cards {
         .container {
             padding: 2.5rem 1rem 1rem;
             background-color: $background-1;
+            display: grid;
     
             h1 {
+                grid-column: 1/4;
+                grid-row: 1;
                 font-size: 1.1875rem;
             }
     
             p {
+                grid-column: 1/4;
+                grid-row: 2;
                 padding-bottom: 0.5rem;
     
                 span {
@@ -134,6 +141,8 @@ main#Gift-cards {
             }
     
             div:nth-child(3) {
+                grid-column: 1/4;
+                grid-row: 3;
                 padding: 0.5rem 0;
                 margin-bottom: 1rem;
     
@@ -157,6 +166,8 @@ main#Gift-cards {
             }
     
             div:nth-child(4) {
+                grid-column: 3;
+                grid-row: 4;
                 text-align: right;
     
                 a {
@@ -171,10 +182,11 @@ main#Gift-cards {
         background-color: $background-6;
 
         img {
-            width: 100%;
+            width: 22.5rem;
         }
 
         .content {
+            width: 22.5rem;
             padding-right: 3.5rem;
 
             h2 {
@@ -276,6 +288,89 @@ main#Gift-cards {
                 }
             }
         }
+
+        section:nth-child(1) {
+            .container {
+                padding-left: 7.125rem;
+
+                h1 {
+                    grid-column: 1/4;
+                    grid-row: 1;
+                    font-size: 1.5rem;
+                }
+    
+                p {
+                    align-self: center;
+                    grid-column: 1;
+                    grid-row: 2;
+                    padding: 0 1.5rem 0 0;
+                    font-size: 1.1875rem;
+                }
+    
+                div {
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+    
+                div:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 2;
+                    margin-bottom: 0;
+                }
+    
+                div:nth-child(4) {
+                    grid-column: 3;
+                    grid-row: 3;
+                }
+            }
+        }
+
+        section:nth-child(17) {
+            padding-left: 7.125rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 23.5rem;
+                margin-right: 2.5rem;
+            }
+    
+            .content {
+                width: 100%;
+                margin-right: 2rem;
+                padding: 0 3.5rem 0 1rem;
+    
+                h2 {
+                    padding: 0 1rem 0.5rem 0;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+
+        section:nth-child(18) {
+            padding-left: 8.125rem;
+
+            h2 {
+                font-size: 0.875rem;
+                letter-spacing: 0.1rem;
+            }
+
+            p {
+                width: 25rem;
+                font-size: 1rem;
+            }
+
+            div {
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }
 
@@ -305,12 +400,57 @@ main#Gift-cards {
                 }
 
                 .left-btn {
-                    left: 1.5rem;
+                    left: 1.5rem + 6.625rem;
+                    // 6.625rem for card-section's padding
                 }
     
                 .right-btn {
                     right: 1.5rem;
                 }
+            }
+        }
+
+        section:nth-child(1) {
+            .container {
+                padding-right: 1.5rem;
+
+                h1 {
+                    grid-column: 1;
+                    grid-row: 1;
+                    align-self: center;
+                    font-size: 1.5rem;
+                }
+    
+                p {
+                    align-self: center;
+                    grid-column: 2;
+                    grid-row: 1;
+                    padding: 0 1.5rem 0 0;
+                    font-size: 1.1875rem;
+                }
+    
+                div {
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+    
+                div:nth-child(3) {
+                    grid-column: 3;
+                    grid-row: 1;
+                    margin-bottom: 0;
+                }
+    
+                div:nth-child(4) {
+                    grid-column: 16;
+                    grid-row: 2;
+                }
+            }
+        }
+
+        section:nth-child(17) {    
+            .content {
+                width: 40%;
             }
         }
     }
@@ -341,6 +481,16 @@ main#Gift-cards {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        section:nth-child(1) {
+            .container {
+                div:nth-child(4) {
+                    grid-row: 1;
+                    align-self: center;
+                    margin-top: 0;
                 }
             }
         }
