@@ -1,7 +1,9 @@
-
 import { GiftCards } from "./GiftCards/GiftCards";
 import { Home } from "./Home/Home";
 import { Menu } from "./Menu/Menu";
+import { Featured } from "./Menu/Featured/Featured";
+import { PreviousOrder } from "./Menu/PreviousOrder/PreviousOrder";
+import { FavoriteProducts } from "./Menu/FavoriteProducts/FavoriteProducts";
 import { Rewards } from "./Rewards/Rewards";
 
 export const AppRoutes = [
@@ -10,7 +12,7 @@ export const AppRoutes = [
         element: <Home />
     },
     {
-        path: "/gift-cards",
+        path: "/gift",
         element: <GiftCards />
     },
     {
@@ -20,5 +22,17 @@ export const AppRoutes = [
     {
         path: "/rewards",
         element: <Rewards />
+    },
+    {
+        path: "/menu/featured",
+        element: <Featured />
+    },
+    {
+        path: "/menu/previous",
+        element: <PreviousOrder />
+    },
+    {
+        path: "/menu/favorites",
+        element: <FavoriteProducts />
     }
 ];

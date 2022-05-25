@@ -1,22 +1,23 @@
 import "./Rewards.scss";
-import Header from "../../components/Header/Header";
-import EarnStars1 from "../../assets/images/Earn-stars-1.png";
-import EarnStars2 from "../../assets/images/Earn-stars-2.png";
-import EarnStars3 from "../../assets/images/Earn-stars-3.png";
-import EarnStars4 from "../../assets/images/Earn-stars-4.webp";
-import EarnStars5 from "../../assets/images/Earn-stars-5.webp";
-import EndlessExtras1 from "../../assets/images/Endless-extras-1.jpg";
-import EndlessExtras2 from "../../assets/images/Endless-extras-2.jpg";
-import EndlessExtras3 from "../../assets/images/Endless-extras-3.jpg";
-import GettingStarted1 from "../../assets/images/Getting-started-1.jpg";
-import GettingStarted2 from "../../assets/images/Getting-started-2.webp";
-import GettingStarted3 from "../../assets/images/Getting-started-3.jpg";
-import Option1 from "../../assets/images/Option-1.webp";
-import Option2 from "../../assets/images/Option-2.webp";
-import Option3 from "../../assets/images/Option-3.webp";
-import Option4 from "../../assets/images/Option-4.webp";
-import Option5 from "../../assets/images/Option-5.webp";
+import { Header } from "../../components/Header/Header";
+import { Footer } from "../../components/Footer/Footer";
 import { useState, useEffect } from "react";
+import EarnStars1 from "../../assets/images/Rewards/Earn-stars-1.png";
+import EarnStars2 from "../../assets/images/Rewards/Earn-stars-2.png";
+import EarnStars3 from "../../assets/images/Rewards/Earn-stars-3.png";
+import EarnStars4 from "../../assets/images/Rewards/Earn-stars-4.webp";
+import EarnStars5 from "../../assets/images/Rewards/Earn-stars-5.webp";
+import EndlessExtras1 from "../../assets/images/Rewards/Endless-extras-1.jpg";
+import EndlessExtras2 from "../../assets/images/Rewards/Endless-extras-2.jpg";
+import EndlessExtras3 from "../../assets/images/Rewards/Endless-extras-3.jpg";
+import GettingStarted1 from "../../assets/images/Rewards/Getting-started-1.jpg";
+import GettingStarted2 from "../../assets/images/Rewards/Getting-started-2.webp";
+import GettingStarted3 from "../../assets/images/Rewards/Getting-started-3.jpg";
+import Option1 from "../../assets/images/Rewards/Option-1.webp";
+import Option2 from "../../assets/images/Rewards/Option-2.webp";
+import Option3 from "../../assets/images/Rewards/Option-3.webp";
+import Option4 from "../../assets/images/Rewards/Option-4.webp";
+import Option5 from "../../assets/images/Rewards/Option-5.webp";
 
 export const Rewards = () => {
     document.title = "Starbucks® Rewards - Order Ahead, Endless Extras, Free Coffee: Starbucks Coffee Company";
@@ -125,12 +126,11 @@ export const Rewards = () => {
     return (
         <>
             <Header rewardsActive="active"/>
+            <div className="banner">
+                <h1>STARBUCKS® REWARDS</h1>
+                <a href="/">Join in the app</a>
+            </div>
             <main id="Rewards">
-                <section className="rewards-section">
-                    <h1>STARBUCKS® REWARDS</h1>
-                    <a href="/">Join in the app</a>
-                </section>
-
                 <section className="rewards-section">
                     <div className="heading-container">
                         <h1>FREE COFFEE <br /> IS A TAP AWAY</h1>
@@ -431,6 +431,7 @@ export const Rewards = () => {
                     </div>
                 </section>
             </main>
+            <Footer />
         </>
     )
 }

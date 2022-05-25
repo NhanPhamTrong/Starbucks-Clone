@@ -1,5 +1,129 @@
 @import "../../assets/global-styles/global-styles";
 
 main#Menu {
-    
+    .main-content {
+        h1, h2, h3, a {
+            color: $word-color-5;
+        }
+
+        .menu {
+            order: 2;
+            padding: 2rem 1rem 0;
+
+            h1 {
+                padding-bottom: 1.5rem;
+                font-size: 1.5rem;
+            }
+
+            div {
+                h2 {
+                    font-size: 1.1875rem;
+                }
+
+                hr {
+                    margin: 1rem 0 2rem;
+                }
+
+                ul {
+                    padding-bottom: 1.5rem;
+
+                    li {
+                        margin-bottom: 1rem;
+
+                        a {
+                            font-size: 0.875rem;
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                height: 4.5rem;
+                                width: 4.5rem;
+                                margin-right: 1rem;
+                                border-radius: 10rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .side-menu {
+            order: 1;
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 786px) {
+    main#Menu {
+        .main-content {
+            .menu {
+                div {
+                    ul {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main#Menu {
+        .main-content {
+            padding-top: 9.5rem;
+            display: flex;
+
+            .menu {
+                padding: 2rem 2.5rem 0 7.125rem;
+
+                h1 {
+                    padding-bottom: 3rem;
+                    font-size: 1.75rem;
+                }
+
+                div {
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                font-size: 1rem;
+
+                                img {
+                                    height: 7rem;
+                                    width: 7rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .side-menu {
+                width: 17.125rem;
+                padding: 0.5rem 0 0 7.125rem;
+                display: block;
+
+                div {
+                    h3 {
+                        margin-top: 1.5rem;
+                    }
+
+                    ul {
+                        li {
+                            margin: 1rem 0;
+
+                            a {
+                                color: $word-color-9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

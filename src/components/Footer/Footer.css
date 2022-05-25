@@ -279,16 +279,27 @@ body {
   overflow-x: hidden;
 }
 
-body footer {
-  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+body .link-btn {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body .link-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body .link-btn:active {
+  -webkit-transform: scale(0.95) translate(0);
+          transform: scale(0.95) translate(0);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 body.active-navbar {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
   body, body.active-navbar {
     overflow-x: hidden;
     overflow-y: visible;
@@ -297,6 +308,8 @@ body.active-navbar {
 
 footer {
   padding: 1.5rem 1rem;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 footer .dropdown-section .dropdown {
@@ -322,12 +335,13 @@ footer .dropdown-section .dropdown button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 footer .dropdown-section .dropdown button span {
   height: 2.75rem;
   width: 2.75rem;
+  border-radius: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,7 +356,6 @@ footer .dropdown-section .dropdown button span {
 }
 
 footer .dropdown-section .dropdown button span:hover {
-  border-radius: 100px;
   background-color: rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -449,6 +462,9 @@ footer .copyright {
 }
 
 @media only screen and (min-width: 786px) {
+  footer {
+    padding: 1.5rem 1rem 1.5rem 7.125rem;
+  }
   footer .dropdown-section button {
     font-size: 1.1875rem;
   }
@@ -456,7 +472,7 @@ footer .copyright {
 
 @media only screen and (min-width: 1024px) {
   footer {
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 2.5rem 1.5rem 7.125rem;
   }
   footer .dropdown-section {
     display: -webkit-box;
@@ -464,7 +480,8 @@ footer .copyright {
     display: flex;
   }
   footer .dropdown-section .dropdown {
-    width: 190px;
+    max-height: 20rem;
+    width: 11.875rem;
   }
   footer .dropdown-section .dropdown button {
     padding: 0;

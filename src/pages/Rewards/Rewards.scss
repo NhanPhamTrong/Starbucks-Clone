@@ -1,5 +1,30 @@
 @import "../../assets/global-styles/global-styles";
 
+.banner {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background-color: $banner-background;
+    color: $word-color-1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    h1 {
+        font-size: 0.8125rem;
+    }
+
+    a {
+        padding: 0.5rem 1rem;
+        border: $btn-border-1 solid 1px;
+        border-radius: 10rem;
+        color: $word-color-1;
+        line-height: 1rem;
+    }
+}
+
 main#Rewards {
     .rewards-section {
         margin-bottom: 4.5rem;
@@ -16,34 +41,34 @@ main#Rewards {
         }
     }
 
+    // .rewards-section:nth-child(1) {
+    //     margin: 0;
+    //     padding: 0.5rem 1rem;
+    //     background-color: $banner-background;
+    //     color: $word-color-1;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     position: sticky;
+    //     top: 0;
+    //     z-index: 1;
+
+    //     h1 {
+    //         font-size: 0.8125rem;
+    //     }
+
+    //     a {
+    //         padding: 0.5rem 1rem;
+    //         border: $btn-border-1 solid 1px;
+    //         border-radius: 10rem;
+    //         color: $word-color-1;
+    //         line-height: 1rem;
+    //     }
+    // }
+
     .rewards-section:nth-child(1) {
-        margin: 0;
-        padding: 0.5rem 1rem;
-        background-color: $banner-background;
-        color: $word-color-1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-
-        h1 {
-            font-size: 0.8125rem;
-        }
-
-        a {
-            padding: 0.5rem 1rem;
-            border: $btn-border-1 solid 1px;
-            border-radius: 10rem;
-            color: $word-color-1;
-            line-height: 1rem;
-        }
-    }
-
-    .rewards-section:nth-child(2) {
         padding: 0 0 20rem 0;
-        background: $background-1 url("../../assets/images/Rewards-hero-mobile.webp") no-repeat bottom left;
+        background: $background-1 url("../../assets/images/Rewards/Rewards-hero-mobile.webp") no-repeat bottom left;
         background-size: 100%;
 
         .heading-container {
@@ -102,7 +127,7 @@ main#Rewards {
         }
     }
 
-    .rewards-section:nth-child(3) {
+    .rewards-section:nth-child(2) {
         font-size: 0.875rem;
 
         h2 {
@@ -149,7 +174,7 @@ main#Rewards {
         }
     }
 
-    .rewards-section:nth-child(4) {
+    .rewards-section:nth-child(3) {
         padding: 0;
         background-color: rgba(212, 233, 226, 0.3);
 
@@ -227,7 +252,7 @@ main#Rewards {
         }
     }
 
-    .rewards-section:nth-child(5) {
+    .rewards-section:nth-child(4) {
         font-size: 0.875rem;
 
         h2, .intro {
@@ -273,7 +298,7 @@ main#Rewards {
         }
     }
 
-    .rewards-section:nth-child(6) {
+    .rewards-section:nth-child(5) {
         padding: 3rem 1rem;
         background-color: $background-4;
 
@@ -329,7 +354,7 @@ main#Rewards {
         }
     }
 
-    .rewards-section:nth-child(7) {
+    .rewards-section:nth-child(6) {
         form {
             padding-top: 1rem;
 
@@ -456,7 +481,7 @@ main#Rewards {
         }
     }
 
-    .rewards-section:nth-child(8) {
+    .rewards-section:nth-child(7) {
         p {
             color: $word-color-4;
             line-height: 1.25rem;
@@ -467,7 +492,7 @@ main#Rewards {
         }
     }
 
-    .rewards-section:nth-child(9) {
+    .rewards-section:nth-child(8) {
         p, h4 {
             color: $word-color-4;
             font-size: 0.8125rem;
@@ -506,9 +531,9 @@ main#Rewards {
             }
         }
 
-        .rewards-section:nth-child(2) {
+        .rewards-section:nth-child(1) {
             padding: 7rem 0;
-            background: $background-1 url("../../assets/images/Rewards-hero-desktop.webp") no-repeat center right 45%;
+            background: $background-1 url("../../assets/images/Rewards/Rewards-hero-desktop.webp") no-repeat center right 45%;
             background-size: cover;
 
             .heading-container {
@@ -532,7 +557,7 @@ main#Rewards {
             }
         }
 
-        .rewards-section:nth-child(3) {
+        .rewards-section:nth-child(2) {
             h2, .intro {
                 width: 50%;
                 margin: 0 auto;
@@ -568,7 +593,7 @@ main#Rewards {
             }
         }
 
-        .rewards-section:nth-child(4) {
+        .rewards-section:nth-child(3) {
             .option-btn {
                 width: 34rem;
                 margin: 0 auto;
@@ -614,7 +639,7 @@ main#Rewards {
             }
         }
 
-        .rewards-section:nth-child(5) {
+        .rewards-section:nth-child(4) {
             h2, .intro {
                 width: 50%;
                 margin: 0 auto;
@@ -640,7 +665,7 @@ main#Rewards {
             }
         }
 
-        .rewards-section:nth-child(6) {
+        .rewards-section:nth-child(5) {
             h2, .intro {
                 width: 50%;
                 margin: 0 auto;
@@ -679,12 +704,12 @@ main#Rewards {
             }
         }
 
-        .rewards-section:nth-child(7), .rewards-section:nth-child(8) {
+        .rewards-section:nth-child(6), .rewards-section:nth-child(7) {
             width: 50%;
             margin-left: 10rem;
         }
 
-        .rewards-section:nth-child(9) {
+        .rewards-section:nth-child(8) {
             display: grid;
             grid-column-gap: 2rem;
 
@@ -717,27 +742,43 @@ main#Rewards {
 }
 
 @media only screen and (min-width: 1024px) {
+    .banner {
+        height: 3.125rem;
+        width: 100%;
+        padding-left: 7rem;
+        position: fixed;
+        top: 6.25rem;
+
+        h1 {
+            font-size: 1rem;
+        }
+
+        a {
+            display: none;
+        }
+    }
+
     main#Rewards {
         margin-top: 6.25rem;
         padding-top: 3.125rem;
 
-        .rewards-section:nth-child(1) {
-            height: 3.125rem;
-            width: 100%;
-            padding-left: 7rem;
-            position: fixed;
-            top: 6.25rem;
+        // .rewards-section:nth-child(1) {
+        //     height: 3.125rem;
+        //     width: 100%;
+        //     padding-left: 7rem;
+        //     position: fixed;
+        //     top: 6.25rem;
 
-            h1 {
-                font-size: 1rem;
-            }
+        //     h1 {
+        //         font-size: 1rem;
+        //     }
 
-            a {
-                display: none;
-            }
-        }
+        //     a {
+        //         display: none;
+        //     }
+        // }
 
-        .rewards-section:nth-child(6) {
+        .rewards-section:nth-child(5) {
             .earn-stars-container {
                 .earn-stars {
                     .container {

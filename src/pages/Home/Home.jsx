@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import Header from "../../components/Header/Header";
+import { Header } from "../../components/Header/Header";
+import { Footer } from "../../components/Footer/Footer";
 import "./Home.scss";
-import Home1 from "../../assets/images/Home-1.webp";
-import Home2 from "../../assets/images/Home-2.jpg";
-import Home3 from "../../assets/images/Home-3.jpg";
-import Home4 from "../../assets/images/Home-4.webp";
-import Home5 from "../../assets/images/Home-5.webp";
-import Home6 from "../../assets/images/Home-6.jpg";
-import Home7 from "../../assets/images/Home-7.jpg";
+import Home1 from "../../assets/images/Home/Home-1.webp";
+import Home2 from "../../assets/images/Home/Home-2.jpg";
+import Home3 from "../../assets/images/Home/Home-3.jpg";
+import Home4 from "../../assets/images/Home/Home-4.webp";
+import Home5 from "../../assets/images/Home/Home-5.webp";
+import Home6 from "../../assets/images/Home/Home-6.jpg";
+import Home7 from "../../assets/images/Home/Home-7.jpg";
 
 // Change some <button> and <p> to <Link>
 
@@ -101,6 +102,7 @@ export const Home = () => {
                         at <a href="https://bluestarfam.org">https://bluestarfam.org</a> and <a href="https://www.operationgratitude.com/">https://www.operationgratitude.com/</a>.</p>
                 </section>
             </main>
+            <Footer />
         </>
     )
 }

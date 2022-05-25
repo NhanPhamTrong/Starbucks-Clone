@@ -2,6 +2,7 @@
 
 footer {
     padding: 1.5rem 1rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 
     .dropdown-section {
         .dropdown {
@@ -19,11 +20,12 @@ footer {
                 align-items: center;
                 justify-content: space-between;
                 position: relative;
-                z-index: 1;
+                z-index: 10;
         
                 span {
                     height: 2.75rem;
                     width: 2.75rem;
+                    border-radius: 100px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -31,7 +33,6 @@ footer {
                 }
         
                 span:hover {
-                    border-radius: 100px;
                     background-color: rgba(0, 0, 0, 0.1);
                     transition: 0.4s;
                 }
@@ -131,6 +132,8 @@ footer {
 
 @media only screen and (min-width: 786px) {
     footer {
+        padding: 1.5rem 1rem 1.5rem 7.125rem;
+
         .dropdown-section {
             button {
                 font-size: 1.1875rem;
@@ -141,13 +144,14 @@ footer {
 
 @media only screen and (min-width: 1024px) {
     footer {
-        padding: 1.5rem 2.5rem;
+        padding: 1.5rem 2.5rem 1.5rem 7.125rem;
         
         .dropdown-section {
             display: flex;
 
             .dropdown {
-                width: 190px;
+                max-height: 20rem;
+                width: 11.875rem;
 
                 button {
                     padding: 0;

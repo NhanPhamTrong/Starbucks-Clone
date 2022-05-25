@@ -5,8 +5,17 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
     overflow-x: hidden;
 
-    footer {
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    .link-btn {
+        transition: 0.2s;
+    }
+
+    .link-btn:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .link-btn:active {
+        transform: scale(0.95) translate(0);
+        transition: 0.2s;
     }
 }
 
@@ -14,7 +23,7 @@ body.active-navbar {
     overflow: hidden;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
     body, body.active-navbar {
         overflow-x: hidden;
         overflow-y: visible;

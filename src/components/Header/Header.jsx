@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
-const Header = (props) => {
+export const Header = (props) => {
     const [active, setActive] = useState({
         navbarActive: "",
         menuActive: ""
@@ -11,7 +11,7 @@ const Header = (props) => {
     const ToggleNavbar = (e) => {
         setActive(prevValue => ({
             navbarActive: e.target.closest("button").classList.contains("active") ? "" : "active",
-            menuActive: prevValue.menuActive
+            menuActive: ""
         }));
     }
 
@@ -42,7 +42,7 @@ const Header = (props) => {
                 </div>
             </div>
             <nav className={active.navbarActive}>
-                <div className={"nav-container " + active.navbarActive}>
+                <div className="nav-container">
                     <ul className="navbar">
                         <li className="nav-item">
                             <button className="open-btn" onClick={ToggleMenu} type="button" aria-label="Open sub-menu">
@@ -57,14 +57,14 @@ const Header = (props) => {
                             <Link className={"nav-link " + props.rewardsActive} to="/rewards">Rewards</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={"nav-link " + props.giftCardsActive} to="/gift-cards">Gift Cards</Link>
+                            <Link className={"nav-link " + props.giftCardsActive} to="/gift">Gift Cards</Link>
                         </li>
                     </ul>
                     <hr />
                     <div className="navbar-btn">
                         <div>
-                            <Link className="sign-in-btn" to="/sign-in">Sign in</Link>
-                            <Link className="join-now-btn" to="/create">Join now</Link>
+                            <Link className="sign-in-btn link-btn" to="/sign-in">Sign in</Link>
+                            <Link className="join-now-btn link-btn" to="/create">Join now</Link>
                         </div>
                         <Link className="store-locator-btn" to="/store-locator">
                             <i className="fa-solid fa-location-dot"></i>
@@ -83,18 +83,16 @@ const Header = (props) => {
                         <Link className="menu-link" to="/menu">All products</Link>
                     </li>
                     <li className="menu-item">
-                        <Link className="menu-link" to="/menu">Featured</Link>
+                        <Link className="menu-link" to="/menu/featured">Featured</Link>
                     </li>
                     <li className="menu-item">
-                        <Link className="menu-link" to="/menu">Previous</Link>
+                        <Link className="menu-link" to="/menu/previous">Previous</Link>
                     </li>
                     <li className="menu-item">
-                        <Link className="menu-link" to="/menu">Favorites</Link>
+                        <Link className="menu-link" to="/menu/favorites">Favorites</Link>
                     </li>
                 </ul>
             </nav>
         </header>
     )
 }
-
-export default Header;

@@ -7,13 +7,18 @@
 
 // Colors
 $alizarin: rgb(214, 43, 31);
+$athens-grey: rgb(215, 217, 219);
 $black: rgb(0, 0, 0);
+$burnt-sienna: rgb(240, 100, 100);
 $dim-gray: rgb(100, 100, 100);
 $jade: rgb(0, 168, 98);
 $laser: rgb(203, 162, 88);
 $narvik: rgb(242, 240, 235);
 $nero: rgb(33, 33, 33);
+$pale-green: rgb(155, 245, 180);
 $palm-green: rgb(30, 57, 50);
+$silver: rgb(195, 195, 195);
+$tickle-me-pink: rgb(250, 145, 170);
 $tranquil: rgb(212, 233, 226);
 $watercourse: rgb(0, 117, 74);
 $white: rgb(255, 255, 255);
@@ -25,6 +30,11 @@ $background-2: $palm-green;
 $background-3: $watercourse;
 $background-4: $narvik;
 $background-5: $white;
+$background-6: $white-smoke;
+$background-7: $nero;
+$background-8: $burnt-sienna;
+$background-9: $pale-green;
+$background-10: $tickle-me-pink;
 $banner-background: $palm-green;
 $btn-border-1: $white;
 $btn-border-2: $palm-green;
@@ -34,6 +44,7 @@ $input-border-1: $watercourse;
 $input-border-2: $alizarin;
 $join-now-btn-background: $black;
 $menu-background: $white;
+$menu-links-border: $athens-grey;
 $nav-background: $white;
 $underline-current-1: $watercourse;
 $social-media-btn-background: $nero;
@@ -46,6 +57,7 @@ $word-color-5: $nero;
 $word-color-6: $watercourse;
 $word-color-7: $jade;
 $word-color-8: $alizarin;
+$word-color-9: $silver;
 
 
 @keyframes navbar-toggler-bar-1 {

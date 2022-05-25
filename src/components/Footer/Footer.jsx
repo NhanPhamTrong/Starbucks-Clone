@@ -1,13 +1,13 @@
 import "./Footer.scss";
 
-export const Footer = () => {
+export const Footer = (props) => {
     const ClickDropdown = (e) => {
         const dropdownClassList = e.target.closest(".dropdown").classList;
         dropdownClassList.value = dropdownClassList.contains("active") ? "dropdown" : "dropdown active";
     }
 
     return (
-        <footer>
+        <footer style={{"paddingBottom": props.footerPaddingBottom}}>
             <div className="dropdown-section">
                 <div className="dropdown">
                     <button type="button" onClick={ClickDropdown} aria-label="About">

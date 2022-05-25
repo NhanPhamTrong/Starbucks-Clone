@@ -279,16 +279,27 @@ body {
   overflow-x: hidden;
 }
 
-body footer {
-  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+body .link-btn {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body .link-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body .link-btn:active {
+  -webkit-transform: scale(0.95) translate(0);
+          transform: scale(0.95) translate(0);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 body.active-navbar {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 786px) {
   body, body.active-navbar {
     overflow-x: hidden;
     overflow-y: visible;

@@ -1,0 +1,86 @@
+@import "../../assets/global-styles/global-styles";
+
+main#Menu-previous, main#Menu-favorites {
+    margin-bottom: 3rem;
+
+    .container {
+        max-width: 20rem;
+        margin: 0 1rem;
+        color: $word-color-5;
+
+        h1 {
+            margin: 1rem 0;
+            padding-left: 1rem;
+            font-size: 1.5rem;
+        }
+
+        img {
+            width: 12.5rem;
+        }
+
+        h2 {
+            margin: 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: $word-color-4;
+        }
+
+        div {
+            padding-top: 0.5rem;
+
+            a {
+                padding: 0.5rem 1rem;
+                border: $btn-border-3 solid 1px;
+                border-radius: 10rem;
+                color: $word-color-2;
+                display: inline-block;
+                font-size: 0.875rem;
+                font-weight: 700;
+            }
+
+            a:nth-child(2) {
+                margin-left: 1rem;
+                background-color: $join-now-btn-background;
+                color: $word-color-1;
+            }
+
+            a:nth-child(1):hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            a:nth-child(2):hover {
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 786px) {
+    main#Menu-previous, main#Menu-favorites {
+        padding-left: 7.125rem;
+
+        .container {
+            margin: 0;
+
+            h1 {
+                margin: 2.5rem 0;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            p {
+                font-size: 1.1875rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main#Menu-previous, main#Menu-favorites {
+        padding-top: 9.5rem;
+    }
+}

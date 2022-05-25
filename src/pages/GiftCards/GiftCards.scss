@@ -1,0 +1,348 @@
+@import "../../assets/global-styles/global-styles";
+
+main#Gift-cards {
+    padding: 1.5rem 0 3rem;
+
+    section {
+        a {
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        p {
+            color: $word-color-4;
+            font-size: 0.875rem;
+        }
+
+        .title {
+            margin: 1rem 0;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 0.8125rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            a {
+                padding: 0.5rem 1rem;
+                color: $word-color-6;
+                font-size: 0.875rem;
+            }
+        }
+
+        .card-section {
+            padding: 1rem 0 1rem 0.5rem;
+            position: relative;
+            overflow-x: hidden;
+
+            ul {
+                display: flex;
+                position: relative;
+                transition: 0.4s;
+
+                li {
+                    width: calc((100vw - 17px - 0.5rem - 1rem) / 2);
+                    // 17px scroll bar
+                    // 0.5rem for card-section's padding
+                    // 1rem for right button's position
+                    // divided by 2 because of showing 2 cards
+                    padding: 0 0.5rem;
+
+                    a {
+                        pointer-events: none;
+                        opacity: 0.25;
+                        transition: 0.4s;
+
+                        img {
+                            width: calc((100vw - 17px - 0.5rem - 1rem - 2 * 2 * 0.5rem) / 2);
+                            // 2 * 2 * 0.5rem for li's padding of 2 cards
+                            border-radius: 0.5rem;
+                            transition: 0.2s;
+                        }
+                    }
+
+                    a:hover {
+                        img {
+                            transform: translate(0, -0.5rem);
+                            transition: 0.2s;
+                        }
+                    }
+
+                    a.shown {
+                        pointer-events: all;
+                        opacity: 1;
+                        transition: 0.4s;
+                    }
+                }
+            }
+
+            button {
+                height: 2.5rem;
+                width: 2.5rem;
+                border: none;
+                border-radius: 10rem;
+                font-size: 1.5rem;
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                transition: 0.2s;
+                z-index: 5;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            button:active {
+                transform: scale(0.95) translate(0, -50%);
+                transition: 0.2s;
+            }
+
+            .left-btn {
+                left: 1rem;
+            }
+
+            .right-btn {
+                right: 1rem;
+            }
+        }
+    }
+
+    section:nth-child(1) {
+        .container {
+            padding: 2.5rem 1rem 1rem;
+            background-color: $background-1;
+    
+            h1 {
+                font-size: 1.1875rem;
+            }
+    
+            p {
+                padding-bottom: 0.5rem;
+    
+                span {
+                    color: $star;
+                    font-size: 0.75rem;
+                }
+            }
+    
+            div:nth-child(3) {
+                padding: 0.5rem 0;
+                margin-bottom: 1rem;
+    
+                a {
+                    padding: 0.5rem 1rem;
+                    border: $btn-border-3 solid 1px;
+                    border-radius: 10rem;
+                    color: $word-color-5;
+                    display: inline-block;
+                }
+    
+                a:nth-child(2) {
+                    margin-left: 1rem;
+                    background-color: $join-now-btn-background;
+                    color: $word-color-1;
+                }
+    
+                a:nth-child(2):hover {
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+            }
+    
+            div:nth-child(4) {
+                text-align: right;
+    
+                a {
+                    color: $word-color-6;
+                }
+            }
+        }
+    }
+
+    section:nth-child(17) {
+        padding: 2rem;
+        background-color: $background-6;
+
+        img {
+            width: 100%;
+        }
+
+        .content {
+            padding-right: 3.5rem;
+
+            h2 {
+                padding: 1.5rem 0 0.5rem;
+                font-weight: 400;
+            }
+
+            a {
+                margin-top: 1rem;
+                padding: 0.5rem 1rem;
+                border: $btn-border-3 solid 1px;
+                border-radius: 10rem;
+                color: $word-color-5;
+                display: inline-block;
+            }
+        }
+    }
+
+    section:nth-child(18) {
+        padding: 2.5rem 2rem;
+        background-color: $background-4;
+        color: $word-color-5;
+
+        h2 {
+            margin-bottom: 0.5rem;
+            font-size: 0.8125rem;
+        }
+
+        div {
+            a {
+                margin: 1rem 1rem 0 0;
+                padding: 0.5rem 1rem;
+                border: $btn-border-3 solid 1px;
+                border-radius: 10rem;
+                color: $word-color-5;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 475px) {
+    main#Gift-cards {
+        section {
+            .card-section {
+                ul {
+                    li {
+                        width: calc((100vw - 17px  - 0.5rem - 1rem - 2.5rem) / 3);
+                        // 17px scroll bar
+                        // 0.5rem for card-section's padding
+                        // 1rem for right button's position
+                        // 2.5rem for width of right button
+                        // divided by 3 because of showing 3 cards
+
+                        a {
+                            img {
+                                width: calc((100vw - 17px  - 0.5rem - 1rem - 2.5rem - 3 * 2 * 0.5rem) / 3);
+                                // 3 * 2 * 0.5rem for li's padding of 3 cards
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 786px) {
+    main#Gift-cards {
+        section {
+            .title {
+                padding-left: 7.125rem;
+
+                a {
+                    font-size: 1rem;
+                }
+            }
+
+            .card-section {
+                padding: 1rem 0 1rem 6.625rem;
+                // (7.125rem - 0.5rem = 6.625rem) because li's padding from left side is 0.5rem
+
+                ul {
+                    li {
+                        width: calc((100vw - 17px - 1rem - 2.5rem - 6.625rem) / 3);
+                        // 17px scroll bar
+                        // 1rem for right button's position
+                        // 2.5rem for width of right button
+                        // 6.625rem for card-section's padding
+                        // divided by 3 because of showing 3 cards
+
+                        a {
+                            img {
+                                width: calc((100vw - 17px - 1rem - 2.5rem - 6.625rem - 3 * 2 * 0.5rem) / 3);
+                                // 3 * 2 * 0.5rem for li's padding of 3 cards
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main#Gift-cards {
+        padding-top: 7.75rem;
+
+        section {
+            .card-section {
+                ul {
+                    li {
+                        width: calc((100vw - 17px - 1.5rem - (2.5rem - 0.5rem) - 6.625rem) / 4);
+                        // 17px scroll bar
+                        // 1.5rem for right button's position
+                        // 2.5rem for width of right button
+                        // 0.5rem for li's padding (right button is right after last shown image)
+                        // 6.625rem for card-section's padding
+                        // divided by 4 because of showing 4 cards
+
+                        a {
+                            img {
+                                width: calc((100vw - 17px - 1.5rem - (2.5rem - 0.5rem) - 6.625rem - 4 * 2 * 0.5rem) / 4);
+                                // 4 * 2 * 0.5rem for li's padding of 4 cards
+                            }
+                        }
+                    }
+                }
+
+                .left-btn {
+                    left: 1.5rem;
+                }
+    
+                .right-btn {
+                    right: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    main#Gift-cards {
+        section {
+            .card-section {
+                padding: 1rem 0 1rem 6.125rem;
+                // (7.125rem - 1rem = 6.125rem) because li's padding from left side is 1rem
+
+                ul {
+                    li {
+                        width: calc((100vw - 17px - 1.5rem - 2.5rem - 2rem - 6.125rem) / 4);
+                        // 17px scroll bar
+                        // 1.5rem for right button's position
+                        // 2.5rem for width of right button
+                        // 2rem for distance from right button to last shown image
+                        // 6.125rem for card-section's padding
+                        // divided by 4 because of showing 4 cards
+                        padding: 0 1rem;
+
+                        a {
+                            img {
+                                width: calc((100vw - 17px - 1.5rem - 2.5rem - 2rem - 6.125rem - 4 * 2 * 1rem) / 4);
+                                // 4 * 2 * 1rem for li's padding of 4 cards
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

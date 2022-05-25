@@ -1,0 +1,59 @@
+@import "../../assets/global-styles/global-styles";
+
+#menu-link {
+    display: none;
+}
+
+@media only screen and (min-width: 786px) {
+    #menu-link {
+        width: 100%;
+        padding-left: 7.125rem;
+        background-color: $background-6;
+        border-color: $menu-links-border;
+        border-style: solid;
+        border-width: 0 0 1px;
+        display: block;
+        position: relative;
+        z-index: 20;
+
+        ul {
+            display: flex;
+
+            li {
+                margin-right: 2rem;
+                position: relative;
+
+                a {
+                    padding: 1rem 0;
+                    color: $word-color-5;
+                    display: inline-block;
+                    font-size: 0.8125rem;
+                }
+
+                a:before {
+                    content: "";
+                    height: 1px;
+                    width: 100%;
+                    background-color: $background-7;
+                    display: none;
+                    position: absolute;
+                    bottom: 0.75rem;
+                    left: 0;
+                }
+            }
+
+            li.active {
+                a:before {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #menu-link {
+        padding-top: 6.25rem;
+        position: fixed;
+    }
+}

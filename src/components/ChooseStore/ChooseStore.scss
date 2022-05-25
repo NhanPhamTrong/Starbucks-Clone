@@ -1,0 +1,64 @@
+@import "../../assets/global-styles/global-styles";
+
+#choose-store {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: $background-2;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+
+    a {
+        width: 100%;
+        margin-right: 1.5rem;
+        padding: 1rem 0;
+        color: $word-color-9;
+        font-size: 0.875rem;
+
+        .mobile {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: $word-color-1;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #choose-store {
+        a {
+            width: 15rem;
+            margin: 0 auto;
+
+            .mobile {
+                display: none;
+            }
+
+            .desktop {
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 5rem;
+        }
+    }
+}
